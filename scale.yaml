@@ -1,0 +1,4 @@
+---
+
+# scale automagically scales the control-plane to fit the defined workload.
+# After a scale event, it triggers a rebalance of the workers across the available control plane.

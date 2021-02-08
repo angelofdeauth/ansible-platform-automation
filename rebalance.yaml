@@ -1,0 +1,4 @@
+---
+
+# rebalance evaluates usage and provisioning requirements to distribute load as evenly as possible.
+# it automagically migrates workers across control-plane nodes so as to ensure even distribution.

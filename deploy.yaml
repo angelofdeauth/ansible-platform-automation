@@ -1,0 +1,8 @@
+---
+
+# sets up control-plane nodes and deploys workers as required.
+
+- hosts: control-plane
+  roles:
+    - init
+    - bhyve

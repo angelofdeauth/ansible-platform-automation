@@ -1,0 +1,18 @@
+---
+# tasks file for freebsd-init
+
+- name: "Get acquainted"
+  gather_facts: false
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - debug:
+        msg: "This role requires your nodes to already have your SSH key installed and authorized for root login."
+    - name: "Test SSH key auth"
+
+- name: "Init Ansible"
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: "Ensure Python 3.7 installed on ansible hosts"
+      raw: "pkg install -y python37"

@@ -1,0 +1,4 @@
+---
+ansible_python_interpreter: /usr/local/bin/python3.7
+# uncomment the line below if using ssh keys is impossible.
+# ansible_connection: paramiko

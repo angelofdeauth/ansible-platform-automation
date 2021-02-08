@@ -1,0 +1,6 @@
+---
+
+# drains all workers from specified control plane nodes.
+# Primarily useful for maintenance windows, hardware failure, and component replacement.
+
+- hosts:

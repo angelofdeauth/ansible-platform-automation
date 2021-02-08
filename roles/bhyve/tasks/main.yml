@@ -1,0 +1,7 @@
+---
+# tasks file for bhyve-init
+
+- name: "Ensure bhyve installed"
+  community.general.pkgng:
+    name: bhyve
+    state: present

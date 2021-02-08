@@ -1,0 +1,30 @@
+---
+# all encapsulates every host group.
+all:
+  children:
+    # `function tier` 'control-plane' encapsulates the FreeBSD hypervisor nodes.
+    control-plane:
+      children:
+        # `physical location group` 'homelab' encapsulates the machines within my home rack.
+        homelab:
+          children:
+            # `cluster group` 'headmaster' encapsulates the primary automation / command and control nodes.
+            headmaster:
+              hosts:
+                aod-master-d51b1u-1:
+                  ansible_host: 172.21.0.10
+              #  aod-master-d51b1u-2
+              #  aod-master-d51b1u-3
+    # function tier 'workers' encapsulates the Linux VMs hosted on the FreeBSD hypervisor nodes.
+    # 'workers' have strictly defined resource requirements, and are used to host applications.
+    workers:
+      children:
+        homelab:
+          children:
+            headmaster:
+              hosts:
+                aod-worker-1:
+                aod-worker-2:
+                aod-worker-3:
+                aod-worker-4:
+                aod-worker-5:
